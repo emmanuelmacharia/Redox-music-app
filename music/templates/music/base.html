@@ -1,0 +1,81 @@
+﻿{% load staticfiles %}<!--loads the path to your static files -->
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="{% static 'music/Styles.css' %}" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Satisfy" >
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script> -->
+    
+    <title> {%block title%}Redox{%endblock%}</title>
+</head>
+<body>
+    <header class="navbar-inverse">
+        <nav class="navbar navbar-expand-lg navbar-default bg-dark">
+        <div class="container-fluid">
+        <!-- Header -->
+            <div class="navbar-header">
+                    <button class="navbar-toggler" type="button" 
+                            data-toggle="collapse" data-target="#topNavBar" aria-controls="topNavBar"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <i class="fa fa-bars"></i>
+                    </button>
+                <a class="navbar-brand" href="{% url 'music:index' %}">Redox</a>
+            </div>
+    <!--Items-->
+        <div class= "collapse navbar-collapse" id="topNavBar">
+            <ul  class="navbar-nav mr-auto">
+                <li class="">
+                    <a  class="nav-link" href="{%url 'music:index' %}" >
+                    <span class="glyphicon glyphicon-align-left glyphicon-cd" aria-hidden="true"></span>&nbsp; Albums
+                    </a>
+                </li>
+                 <li class="">
+                    <a  class="nav-link" href="{%url 'music:index' %}" >
+                    <span class="glyphicon glyphicon-align-left glyphicon-music"></span>&nbsp; Music
+                    </a>
+                </li>
+            </ul>
+                <form class="navbar-form navbar-left form-inline my-2 my-lg-0" role="search" method="get" action="#">
+                    <div class="form-group">
+                        <input type="text" class="form-control mr-sm-2" placeholder="Search"  name="q" value=""/>
+                    </div>
+                </form>&nbsp;
+                        <button type="submit" class="btn btn-outline-success my-2 my-sm-0">Search</button>
+            <div class="navbar-right">
+               <ul class="nav navbar-nav">
+                   <li class="">
+                        <a  class="nav-link" href="{% url 'music:add-album' %}" >
+                        <span class="glyphicon glyphicon-align-left glyphicon-plus"></span>&nbsp; Add Album
+                        </a>
+                    </li>
+                    <li class="">
+                        <a  class="nav-link" href="{%url 'music:index' %}" >
+                        <span class="glyphicon glyphicon-align-left  glyphicon-off" ></span>&nbsp; Logout
+                        </a>
+                    </li>
+               </ul>
+            </div>
+
+        </div>
+        </div>
+        </nav>
+
+    </header>
+    {%block body%}
+    {%endblock%}
+    <!--<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>-->
+    <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+</body>
+</html>

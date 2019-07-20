@@ -1,0 +1,28 @@
+﻿
+{% extends 'music/base.html' %}
+
+{%block title%}Album details{%endblock%}
+    {% block body %}
+            <div>
+                <div class="align-centre">
+                    <img src="{{album_detail.album_art.url}}" style="width: 200px";/><br />
+                    <h3>{{album_detail.album_Title}}</h3><br />
+                    <h4>By {{ album_detail.artist }}</h4><br />
+                    <h5>Genre: {{ album_detail.genre }}</h5><br />
+                    <h5>Year released: {{ album_detail.album_Year }}</h5><br />
+                </div>
+                
+            </div>
+            
+                    {% if error_message %}
+                    <p><strong>{{error_message}}</strong></p>
+                    {% endif %}
+           
+            <div class="align-centre">
+                <ol>
+                    {% for song in album_detail.songs_set.all %}
+                        <li>{{song.song_title}}</li>
+                    {% endfor %}
+                    </ol>
+            </div>
+    {% endblock %}

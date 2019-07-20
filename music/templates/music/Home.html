@@ -1,0 +1,33 @@
+
+
+
+{% extends 'music/base.html' %}
+
+    {% block body %}
+    {% if object_list %}
+
+   <div><h3>Here are all your albums</h3></div>
+    <p>
+
+            {% for album in object_list  %}
+            <div class="albums">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="{{ album.album_art.url }}" height="180" alt="Card image cap">
+                    <div class="card-body">
+                        <h4 class="card-title">{{album.album_Title}}</h4>
+                        <h6 class="card-text">{{album.album_Year}}</h6>
+                        <a href="{%url 'music:albumdetails' album.id %}" class="btn btn-primary">explore album</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+
+    </p>
+    {% else %}
+    <h3>It's lonely here, you don't have any albums yet </h3>
+    {% endif %}
+    {%endblock%}
+
+
+
+https://google.com

@@ -1,0 +1,68 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+
+.albums{
+    float: left;
+    margin: 10px;
+}
+
+body{
+    background: white url('images/71f5f28d3d497bfa1c24d4d5ae5379a3.jpg');
+}
+
+.navbar{
+    border-radius:0;
+
+}
+
+.navbar-brand{
+    font-family:'Satisfy', cursive;
+}
+
+.align-centre{
+    margin-left:50px;
+
+}
+
+/*.image{
+    float:left
+    
+}
+.image{
+    margin:5px
+}
+.image{
+    width:
+}
+*/
+
+
+
+
+/*#topNavBar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+#topNavBar ul li {
+        display: inline;
+    }
+
+
+#my_albums ul {
+    list-style-type: none;
+}
+
+#my_albums li {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    float: left;
+    width: 25%;
+    padding: 15px;  this will be applied internally, due to 
+                      box-sizing property */
+
